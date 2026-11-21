@@ -1,0 +1,12 @@
+node_modules
+.output
+.fresh
+.nitro
+dist
+.git
+.claude
+test
+*.log
+.DS_Store
+Dockerfile
+.dockerignore
