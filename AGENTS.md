@@ -97,6 +97,13 @@ LegInfo: {
   backwards (overnight trains).
 - Use `Temporal` for all date/time math; emit UTC (`...Z`) in the `.ics`.
 
+### Merging legs of the same train
+
+One ride is sometimes split over two travels (e.g. EC 11 Arth-Goldau → Chiasso, then Chiasso → Milano).
+`findContinuations` flags a train leg that has the same name as the previous train leg, departs from the
+station it arrived at, within 60 min. The island shows a per-leg "Same event as …" toggle (off by default);
+`mergeLegs` folds toggled legs into the previous one before `buildIcs` (UID `<keyA>+<keyB>`).
+
 ## Layout
 
 ```
@@ -104,6 +111,7 @@ AGENTS.md
 lib/interrail.ts         # parseShareUrl, fetchTrip, parsePayload → normalized Trip (server)
 lib/timezones.ts         # country → IANA zone, local → UTC with Temporal
 lib/ics.ts               # buildIcs(trip, legs) — pure, used in the island
+lib/merge.ts             # findContinuations / mergeLegs — optionally merge legs of the same train into one event
 lib/temporal.ts          # loads temporal-polyfill only if Temporal is missing
 routes/_app.tsx          # HTML shell
 routes/index.tsx         # paste-a-link form

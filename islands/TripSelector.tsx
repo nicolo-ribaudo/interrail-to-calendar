@@ -2,6 +2,7 @@ import "../lib/temporal.ts";
 import { useComputed, useSignal } from "@preact/signals";
 import type { Leg, Travel, Trip } from "../lib/interrail.ts";
 import { buildIcs } from "../lib/ics.ts";
+import { findContinuations, mergeLegs } from "../lib/merge.ts";
 import { Button } from "../components/Button.tsx";
 
 const isTrain = (l: Leg) => l.kind === "train";
@@ -39,6 +40,15 @@ function TriCheckbox(props: { keys: string[]; selected: Set<string>; onChange: (
 export function TripSelector({ trip }: { trip: Trip }) {
   const allKeys = trip.travels.flatMap((t) => trainKeys(t.legs));
   const selected = useSignal<Set<string>>(new Set(allKeys));
+  /** Legs that continue the same train as the previous leg. */
+  const continuations = findContinuations(trip);
+  /** Keys of continuing legs the user chose to merge into the previous leg's event. */
+  const merged = useSignal<Set<string>>(new Set());
+  const setMerged = (key: string, on: boolean) => {
+    const next = new Set(merged.value);
+    on ? next.add(key) : next.delete(key);
+    merged.value = next;
+  };
 
   const days = new Map<string, Travel[]>();
   for (const t of trip.travels) {
@@ -56,6 +66,8 @@ export function TripSelector({ trip }: { trip: Trip }) {
   const selectedLegs = useComputed(() =>
     trip.travels.flatMap((t) => t.legs).filter((l) => selected.value.has(l.key))
   );
+  /** What ends up in the .ics: selected legs, with merged continuations folded in. */
+  const events = useComputed(() => mergeLegs(selectedLegs.value, merged.value, continuations));
 
   const selectUpcoming = () => {
     const now = Temporal.Now.instant();
@@ -68,7 +80,7 @@ export function TripSelector({ trip }: { trip: Trip }) {
   };
 
   const download = () => {
-    const ics = buildIcs(trip, selectedLegs.value);
+    const ics = buildIcs(trip, events.value);
     const url = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
     const a = document.createElement("a");
     a.href = url;
@@ -106,7 +118,7 @@ export function TripSelector({ trip }: { trip: Trip }) {
   const allCollapsed = collapsed.value.size === days.size;
 
   const sel = selected.value;
-  const n = selectedLegs.value.length;
+  const n = events.value.length;
 
   return (
     <div class="selector">
@@ -194,6 +206,24 @@ export function TripSelector({ trip }: { trip: Trip }) {
                             )}
                           </span>
                         </label>
+                        {continuations.has(leg.key) && (() => {
+                          const prev = continuations.get(leg.key)!;
+                          const enabled = sel.has(leg.key) && sel.has(prev.key);
+                          return (
+                            <label
+                              class="merge-toggle"
+                              title={enabled ? undefined : "Select both legs to merge them"}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={enabled && merged.value.has(leg.key)}
+                                disabled={!enabled}
+                                onChange={(e) => setMerged(leg.key, (e.currentTarget as HTMLInputElement).checked)}
+                              />
+                              Same event as {prev.title} from {prev.from.name} ({prev.departLocal})
+                            </label>
+                          );
+                        })()}
                       </li>
                     ))}
                   </ul>
