@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { parseSharePage, parseShareUrl, ShareLinkError } from "../lib/interrail.ts";
+import { normalizePayload, parseSharePage, parseShareUrl, ShareLinkError } from "../lib/interrail.ts";
 import { buildIcs, escapeText, foldLine } from "../lib/ics.ts";
 
 const html = readFileSync(new URL("./fixtures/share-trip.html", import.meta.url), "utf8");
@@ -71,6 +71,41 @@ describe("parseSharePage", () => {
     const ec = parseSharePage(page, "x").travels[0].legs[3];
     expect(ec.depart).toBe("2026-12-24T22:30:00Z");
     expect(ec.arrive).toBe("2026-12-25T06:10:00Z");
+  });
+  it("treats manually inserted trains (legs without a type) as trains", () => {
+    // Trimmed from a real trip with an Italo train added by hand in Rail Planner.
+    const time = (hours: number, minutes: number) => ({ hours, minutes, offset: 0 });
+    const torino = { coordinates: { latitude: 45.06056, longitude: 7.677498 }, country: "Italy", name: "Torino Porta Nuova" };
+    const milano = { coordinates: { latitude: 45.486388, longitude: 9.204163 }, country: "Italy", name: "Milano Centrale" };
+    const manual = normalizePayload({
+      name: "Manual",
+      travels: [{
+        id: "C35DFDA9-4B9F-4234-B573-D732B3311549",
+        type: 1,
+        date: "2026-12-05T00:00:00.000Z",
+        from: "Torino Porta Nuova",
+        to: "Milano Centrale",
+        infoJson: JSON.stringify({ arrivalTime: time(8, 30), dataSource: 0, date: { day: 5, month: 12, year: 2026 }, departureTime: time(7, 30) }),
+        optionsJson: JSON.stringify({ dateSince1970: 1796452200000, departure: { ...torino, stationId: 8300219 }, arrival: { ...milano, stationId: 8301700 } }),
+        legs: [{
+          sortOrder: 0,
+          infoJson: JSON.stringify({
+            attributeCodes: [], attributes: {}, dataSource: 0, directionStation: "",
+            duration: time(1, 0), startTime: time(7, 30), endTime: time(8, 30),
+            isSeparateTicket: false, stopExtraInfo: [], trainName: "Italo 9919", trainType: 1,
+            trainStopStations: [{ ...torino, stationId: 0 }, { ...milano, stationId: 0 }],
+          }),
+        }],
+      }],
+    } as Parameters<typeof normalizePayload>[0], "X");
+    const [leg] = manual.travels[0].legs;
+    expect(leg).toMatchObject({
+      kind: "train",
+      title: "Italo 9919",
+      depart: "2026-12-05T06:30:00Z",
+      arrive: "2026-12-05T07:30:00Z",
+    });
+    expect(buildIcs(manual, [leg])).toContain("SUMMARY:🚆 Italo 9919 Torino Porta Nuova → Milano Centrale");
   });
 });
 
