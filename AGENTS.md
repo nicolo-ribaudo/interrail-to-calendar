@@ -65,7 +65,7 @@ returns an HTML page with the whole trip inlined as a script:
 payload: { name: string; travels: Travel[]; version: number; brand: "interrail" | "eurail"; pass: boolean }
 
 Travel: {
-  id: string; tripId: string; type: number;
+  id: string; tripId: string; type: number; // 0 = planned in the app, 1 = inserted manually
   date: "2026-12-24T00:00:00.000Z";       // date only, midnight Z
   from: string; to: string;                // station names
   infoJson: string; // { date:{day,month,year}, departureTime:{hours,minutes,offset}, arrivalTime:{...}, ctxRecon, ... }
@@ -74,7 +74,8 @@ Travel: {
 }
 
 LegInfo: {
-  type: "TRAIN_TRAVEL" | "STATION_CHANGE_PUBLIC_TRANSPORT" | "CHKI"; // train | transfer | check-in (e.g. Eurostar)
+  type?: "TRAIN_TRAVEL" | "STATION_CHANGE_PUBLIC_TRANSPORT" | "CHKI"; // train | transfer | check-in (e.g. Eurostar)
+                              // missing on manually inserted trains (dataSource: 0, stationId: 0) → treat as train
   trainName: string;          // "ICE 121", "" for non-trains
   transportType?: string;     // "ICE", "IC", ...
   startTime, endTime, duration: { hours, minutes, offset /* always 0 */ };

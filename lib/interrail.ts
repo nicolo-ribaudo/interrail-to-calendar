@@ -65,7 +65,8 @@ interface RawStation {
   coordinates?: { latitude: number; longitude: number };
 }
 interface RawLegInfo {
-  type: string;
+  /** Missing on trains the user inserted manually in the app (those have `dataSource: 0`). */
+  type?: string;
   trainName?: string;
   transportType?: string;
   startTime: RawTime;
@@ -164,8 +165,9 @@ export function parseSharePage(html: string, id: string): Trip {
 const pad = (n: number) => String(n).padStart(2, "0");
 const hm = (t: RawTime) => `${pad(t.hours)}:${pad(t.minutes)}`;
 
-function legKind(type: string): LegKind {
-  if (type === "TRAIN_TRAVEL") return "train";
+function legKind(type: string | undefined): LegKind {
+  // Manually inserted trains have no `type` at all.
+  if (type === undefined || type === "TRAIN_TRAVEL") return "train";
   if (type === "CHKI") return "checkin";
   return "transfer";
 }
