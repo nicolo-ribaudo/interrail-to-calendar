@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ics > builds a calendar for train legs 1`] = `
+"BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//interrail-to-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Test trip
+BEGIN:VEVENT
+UID:AF7F1806-7300-4121-9213-30AD47A005F3-0@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20261224T053800Z
+DTEND:20261224T091300Z
+SUMMARY:🚆 ICE 121 Amsterdam Centraal → Frankfurt(M) Flughafen Fernbf
+LOCATION:Amsterdam Centraal\\, platform 7b
+DESCRIPTION:ICE 121: Amsterdam Centraal 06:38 → Frankfurt(M) Flughafen Fe
+ rnbf 10:13\\nDirection: Frankfurt(Main)Hbf\\nDeparture platform: 7b\\nArrival
+  platform: Fern 5\\nOperator: NS Reizigers B.V.\\n\\nTrip: Test trip
+GEO:52.378607;4.900559
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:AF7F1806-7300-4121-9213-30AD47A005F3-1@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20261224T092200Z
+DTEND:20261224T103300Z
+SUMMARY:🚆 ICE 915 Frankfurt(M) Flughafen Fernbf → Stuttgart Hbf
+LOCATION:Frankfurt(M) Flughafen Fernbf\\, platform Fern 4
+DESCRIPTION:ICE 915: Frankfurt(M) Flughafen Fernbf 10:22 → Stuttgart Hbf 
+ 11:33\\nDirection: Muenchen Hbf\\nDeparture platform: Fern 4\\nArrival platfo
+ rm: 16\\nOperator: DB Fernverkehr AG\\n\\nTrip: Test trip
+GEO:50.053052;8.57028
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:AF7F1806-7300-4121-9213-30AD47A005F3-2@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20261224T111600Z
+DTEND:20261224T142300Z
+SUMMARY:🚆 IC 187 Stuttgart Hbf → Zuerich Hb
+LOCATION:Stuttgart Hbf\\, platform 2
+DESCRIPTION:IC 187: Stuttgart Hbf 12:16 → Zuerich Hb 15:23\\nDirection: Zu
+ erich Hb\\nDeparture platform: 2\\nArrival platform: 5\\nOperator: DB Fernver
+ kehr AG\\n\\nTrip: Test trip
+GEO:48.784719;9.182778
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:AF7F1806-7300-4121-9213-30AD47A005F3-3@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20261224T143300Z
+DTEND:20261224T175100Z
+SUMMARY:🚆 EC 29 Zuerich Hb → Milano Centrale
+LOCATION:Zuerich Hb\\, platform 12
+DESCRIPTION:EC 29: Zuerich Hb 15:33 → Milano Centrale 18:51\\nDirection: M
+ ilano Centrale\\nDeparture platform: 12\\nOperator: Swiss Federal Railways-P
+ assenger subsidiary\\n\\nTrip: Test trip
+GEO:47.37806;8.540274
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:21214720-1A59-4D1C-9B8F-1999093393C5-0@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20270106T080400Z
+DTEND:20270106T112400Z
+SUMMARY:🚆 OGV 7818 Lyon Perrache → Lille Flandres
+LOCATION:Lyon Perrache
+DESCRIPTION:OGV 7818: Lyon Perrache 09:04 → Lille Flandres 12:24\\nDirecti
+ on: Lille Flandres\\nOperator: SNCF Voyageurs\\n\\nTrip: Test trip
+GEO:45.748613;4.825553
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:21214720-1A59-4D1C-9B8F-1999093393C5-3@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20270106T123500Z
+DTEND:20270106T135700Z
+SUMMARY:🚆 ES 9133 Lille Europe → London St Pancras Intl
+LOCATION:Lille Europe
+DESCRIPTION:ES 9133: Lille Europe 13:35 → London St Pancras Intl 13:57\\nD
+ irection: London St Pancras Intl\\nOperator: Eurostar International Limited
+ \\n\\nTrip: Test trip
+GEO:50.639446;3.07556
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:21214720-1A59-4D1C-9B8F-1999093393C5-5@interrail-to-calendar
+DTSTAMP:20261121T120000Z
+DTSTART:20270106T150300Z
+DTEND:20270106T193300Z
+SUMMARY:🚆 EXP London Kings Cross → Edinburgh
+LOCATION:London Kings Cross
+DESCRIPTION:EXP: London Kings Cross 15:03 → Edinburgh 19:33\\nDirection: E
+ dinburgh\\nOperator: London North Eastern Railway\\n\\nTrip: Test trip
+GEO:51.531391;-0.12139
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+"
+`;

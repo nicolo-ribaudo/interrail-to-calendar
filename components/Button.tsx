@@ -1,18 +1,18 @@
-import { ComponentChildren } from "preact";
+import type { ComponentChildren } from "preact";
 
-export function Button(props: { children: ComponentChildren; onClick?: () => void }) {
+export function Button(props: {
+  children: ComponentChildren;
+  onClick?: () => void;
+  type?: "button" | "submit";
+  disabled?: boolean;
+  variant?: "primary" | "secondary";
+}) {
   return (
     <button
+      type={props.type ?? "button"}
       onClick={props.onClick}
-      style={{
-        background: "#0070f3",
-        color: "white",
-        border: "none",
-        borderRadius: "4px",
-        padding: "8px 16px",
-        fontSize: "16px",
-        cursor: "pointer",
-      }}
+      disabled={props.disabled}
+      class={`btn btn-${props.variant ?? "primary"}`}
     >
       {props.children}
     </button>

@@ -1,14 +1,19 @@
 import { page } from "./$index.ts";
-import { Counter } from "../islands/Counter.tsx";
+import { LinkForm } from "../components/LinkForm.tsx";
 
 export default page(function Home() {
   return (
     <main>
-      <h1>Welcome to Fresh</h1>
+      <h1>Interrail → Calendar</h1>
       <p>
-        Edit <code>routes/index.tsx</code> and save to see changes.
+        Turn a trip from the Interrail / Eurail <strong>Rail Planner</strong> app into calendar events.
       </p>
-      <Counter start={0} />
+      <LinkForm />
+      <ol class="help">
+        <li>In Rail Planner, open <em>My Trips</em> and pick a trip.</li>
+        <li>Tap <em>Share</em> → <em>Share as a link</em> and paste it above.</li>
+        <li>Pick the trains you want and download the <code>.ics</code> file.</li>
+      </ol>
     </main>
   );
 });

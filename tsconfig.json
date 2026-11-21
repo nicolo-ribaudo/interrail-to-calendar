@@ -1,3 +1,6 @@
 {
-  "extends": "./.fresh/tsconfig.json"
+  "extends": "./.fresh/tsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "node"]
+  }
 }

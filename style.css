@@ -1,29 +1,244 @@
 :root {
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
+  --bg: #f6f7f9;
+  --fg: #1a1a1a;
+  --muted: #667085;
+  --card: #ffffff;
+  --border: #e4e7ec;
+  --accent: #0b6bcb;
+  --accent-fg: #ffffff;
+  --error: #b42318;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
-  color: #1a1a1a;
-  background: #fafafa;
+  color: var(--fg);
+  background: var(--bg);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111418;
+    --fg: #e7e9ec;
+    --muted: #98a2b3;
+    --card: #1b1f24;
+    --border: #2d333b;
+    --accent: #4c9aff;
+    --accent-fg: #0b0d10;
+    --error: #ff7a70;
+  }
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--bg);
 }
 
 main {
-  max-width: 32rem;
-  padding: 2rem;
-  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 6rem;
 }
 
 h1 {
-  margin-top: 0;
+  margin: 0 0 0.25rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.muted,
+.back {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--error);
+}
+
+.help {
+  color: var(--muted);
+  padding-left: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+  font: inherit;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+.btn-secondary {
+  background: var(--card);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+/* Link form */
+.link-form {
+  margin: 1.5rem 0;
+}
+.link-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.link-form-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.link-form input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+}
+
+/* Selector */
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.day {
+  margin: 1.5rem 0;
+}
+.day h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem;
+}
+.day-header h2 {
+  flex: 1;
+  min-width: 0;
+}
+/* On the right edge, with a 44px touch target, for one-handed use on phones. */
+.collapse-toggle {
+  font: inherit;
+  /* Visible hit area, styled like the secondary buttons. */
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  cursor: pointer;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -0.25rem 0;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.collapse-toggle:hover,
+.collapse-toggle:active {
+  background: var(--border);
+}
+.collapse-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.collapse-toggle svg {
+  transition: transform 0.15s ease;
+}
+.day.collapsed .collapse-toggle svg {
+  transform: rotate(-90deg);
+}
+.day-summary {
+  /* Align with the date text, after the checkbox. */
+  margin: -0.25rem 0 0 calc(13px + 0.5rem);
+  color: var(--muted);
+  font-size: 0.9em;
+}
+.toolbar-spacer {
+  flex: 1;
+}
+.day h2 label,
+.travel h3 label,
+.leg label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.travel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+.travel h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.legs {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+.leg {
+  padding: 0.3rem 0;
+  border-top: 1px solid var(--border);
+}
+.leg:first-child {
+  border-top: none;
+}
+.leg-transfer,
+.leg-checkin {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+.leg-transfer label,
+.leg-checkin label {
+  cursor: default;
+}
+.leg-spacer {
+  display: inline-block;
+  width: 13px;
+}
+.leg-time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.leg-body {
+  flex: 1;
+  min-width: 0;
+}
+.leg-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.download-bar {
+  position: sticky;
+  bottom: 0;
+  padding: 0.75rem 0;
+  background: linear-gradient(transparent, var(--bg) 30%);
+}
+.download-bar .btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
 }

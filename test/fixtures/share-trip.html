@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="https://eurail-trip-assets.s3.eu-central-1.amazonaws.com/template/style.css">
+
+  <script>
+  payload = {"name":"Test trip","travels":[{"__typename":"TripTravel","createDateTime":"2026-11-21T12:04:43.723Z","date":"2026-12-24T00:00:00.000Z","from":"Amsterdam Centraal","id":"AF7F1806-7300-4121-9213-30AD47A005F3","infoJson":"{\"arrivalTime\":{\"hours\":18,\"minutes\":51,\"offset\":0},\"ctxRecon\":\"¶HKI¶T$A=1@O=Amsterdam Centraal (Netherlands)@L=8400058@a=128@$A=1@O=FRANKFURT(M) FLUGHAFEN FERNBF (Germany)@L=8061676@a=128@$202612240638$202612241013$ICE  121$1$$$§T$A=1@O=FRANKFURT(M) FLUGHAFEN FERNBF (Germany)@L=8061676@a=128@$A=1@O=STUTTGART HBF (Germany)@L=8029034@a=128@$202612241022$202612241133$ICE  915$1$$$§T$A=1@O=STUTTGART HBF (Germany)@L=8029034@a=128@$A=1@O=ZUERICH HB (Switzerland)@L=8503000@a=128@$202612241216$202612241523$IC   187$1$$$§T$A=1@O=ZUERICH HB (Switzerland)@L=8503000@a=128@$A=1@O=MILANO CENTRALE (Italy)@L=8301700@a=128@$202612241533$202612241851$EC    29$1$$$¶KC¶#VE#2#CF#100#CA#0#CM#1#SICT#0#AM#395#AM2#0#RT#4#¶KRCC¶#VE#1#\",\"dataSource\":1,\"date\":{\"day\":24,\"month\":12,\"year\":2026},\"departureTime\":{\"hours\":6,\"minutes\":38,\"offset\":0},\"haconVersion\":-1,\"lastUpdatedTimetableInformation\":\"2026-11-19T09:58:58Z\"}","legs":[{"infoJson":"{\"arrivalTrack\":\"Fern 5\",\"attributeCodes\":[\"1 \",\"2 \",\"BR\",\"BW\",\"FB\",\"Re\",\"Rm\",\"Rm\"],\"attributes\":{\"1 \":\"First-class seats\",\"2 \":\"Second-class seats\",\"BR\":\"Restaurant\",\"BW\":\"Bar\",\"FB\":\"Bicycle transport\"},\"dataSource\":1,\"departureTrack\":\"7b\",\"directionStation\":\"Frankfurt(Main)Hbf\",\"duration\":{\"hours\":3,\"minutes\":35,\"offset\":0},\"endTime\":{\"hours\":10,\"minutes\":13,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"1184\",\"adminName\":\"NS Reizigers B.V.\"},\"startTime\":{\"hours\":6,\"minutes\":38,\"offset\":0},\"stopExtraInfo\":[{\"arrivalTime\":{\"hours\":7,\"minutes\":1,\"offset\":0},\"departureTime\":{\"hours\":7,\"minutes\":4,\"offset\":0},\"index\":1},{\"arrivalTime\":{\"hours\":7,\"minutes\":32,\"offset\":0},\"departureTime\":{\"hours\":7,\"minutes\":34,\"offset\":0},\"index\":2},{\"arrivalTime\":{\"hours\":8,\"minutes\":32,\"offset\":0},\"departureTime\":{\"hours\":8,\"minutes\":33,\"offset\":0},\"index\":3},{\"arrivalTime\":{\"hours\":8,\"minutes\":47,\"offset\":0},\"departureTime\":{\"hours\":8,\"minutes\":48,\"offset\":0},\"index\":4},{\"arrivalTime\":{\"hours\":9,\"minutes\":11,\"offset\":0},\"departureTime\":{\"hours\":9,\"minutes\":17,\"offset\":0},\"index\":5},{\"arrivalTime\":{\"hours\":9,\"minutes\":31,\"offset\":0},\"departureTime\":{\"hours\":9,\"minutes\":32,\"offset\":0},\"index\":6}],\"trainName\":\"ICE 121\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":52.378607,\"longitude\":4.900559},\"country\":\"Netherlands\",\"name\":\"Amsterdam Centraal\",\"stationId\":8400058},{\"coordinates\":{\"latitude\":52.089442,\"longitude\":5.109999},\"country\":\"Netherlands\",\"name\":\"Utrecht Centraal\",\"stationId\":8400621},{\"coordinates\":{\"latitude\":51.98389,\"longitude\":5.901113},\"country\":\"Netherlands\",\"name\":\"Arnhem Centraal\",\"stationId\":8400071},{\"coordinates\":{\"latitude\":51.429723,\"longitude\":6.775835},\"country\":\"Germany\",\"name\":\"Duisburg Hbf\",\"stationId\":8010316},{\"coordinates\":{\"latitude\":51.219996,\"longitude\":6.794443},\"country\":\"Germany\",\"name\":\"Duesseldorf Hbf\",\"stationId\":8008094},{\"coordinates\":{\"latitude\":50.943056,\"longitude\":6.958613},\"country\":\"Germany\",\"name\":\"Koeln Hbf\",\"stationId\":8015458},{\"coordinates\":{\"latitude\":50.793889,\"longitude\":7.203056},\"country\":\"Germany\",\"name\":\"Siegburg/Bonn\",\"stationId\":8015588},{\"coordinates\":{\"latitude\":50.053052,\"longitude\":8.57028},\"country\":\"Germany\",\"name\":\"Frankfurt(M) Flughafen Fernbf\",\"stationId\":8061676}],\"trainType\":2,\"transportType\":\"ICE\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":0},{"infoJson":"{\"arrivalTrack\":\"16\",\"attributeCodes\":[\"1 \",\"2 \",\"BR\",\"FB\",\"RM\"],\"attributes\":{\"1 \":\"First-class seats\",\"2 \":\"Second-class seats\",\"BR\":\"Restaurant\",\"FB\":\"Bicycle transport\"},\"dataSource\":1,\"departureTrack\":\"Fern 4\",\"directionStation\":\"Muenchen Hbf\",\"duration\":{\"hours\":1,\"minutes\":11,\"offset\":0},\"endTime\":{\"hours\":11,\"minutes\":33,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"2480\",\"adminName\":\"DB Fernverkehr AG\"},\"startTime\":{\"hours\":10,\"minutes\":22,\"offset\":0},\"stopExtraInfo\":[{\"arrivalTime\":{\"hours\":10,\"minutes\":53,\"offset\":0},\"departureTime\":{\"hours\":10,\"minutes\":56,\"offset\":0},\"index\":1}],\"trainName\":\"ICE 915\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":50.053052,\"longitude\":8.57028},\"country\":\"Germany\",\"name\":\"Frankfurt(M) Flughafen Fernbf\",\"stationId\":8061676},{\"coordinates\":{\"latitude\":49.479442,\"longitude\":8.46889},\"country\":\"Germany\",\"name\":\"Mannheim Hbf\",\"stationId\":8014008},{\"coordinates\":{\"latitude\":48.784719,\"longitude\":9.182778},\"country\":\"Germany\",\"name\":\"Stuttgart Hbf\",\"stationId\":8029034}],\"trainType\":2,\"transportType\":\"ICE\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":1},{"infoJson":"{\"arrivalTrack\":\"5\",\"attributeCodes\":[\"1 \",\"2 \",\"FB\",\"RM\",\"WF\"],\"attributes\":{\"1 \":\"First-class seats\",\"2 \":\"Second-class seats\",\"FB\":\"Bicycle transport\",\"WF\":\"WiFi\"},\"dataSource\":1,\"departureTrack\":\"2\",\"directionStation\":\"Zuerich Hb\",\"duration\":{\"hours\":3,\"minutes\":7,\"offset\":0},\"endTime\":{\"hours\":15,\"minutes\":23,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"2480\",\"adminName\":\"DB Fernverkehr AG\"},\"startTime\":{\"hours\":12,\"minutes\":16,\"offset\":0},\"stopExtraInfo\":[{\"arrivalTime\":{\"hours\":12,\"minutes\":38,\"offset\":0},\"departureTime\":{\"hours\":12,\"minutes\":38,\"offset\":0},\"index\":1},{\"arrivalTime\":{\"hours\":13,\"minutes\":5,\"offset\":0},\"departureTime\":{\"hours\":13,\"minutes\":6,\"offset\":0},\"index\":2},{\"arrivalTime\":{\"hours\":13,\"minutes\":16,\"offset\":0},\"departureTime\":{\"hours\":13,\"minutes\":17,\"offset\":0},\"index\":3},{\"arrivalTime\":{\"hours\":13,\"minutes\":25,\"offset\":0},\"departureTime\":{\"hours\":13,\"minutes\":26,\"offset\":0},\"index\":4},{\"arrivalTime\":{\"hours\":13,\"minutes\":39,\"offset\":0},\"departureTime\":{\"hours\":13,\"minutes\":41,\"offset\":0},\"index\":5},{\"arrivalTime\":{\"hours\":13,\"minutes\":50,\"offset\":0},\"departureTime\":{\"hours\":13,\"minutes\":51,\"offset\":0},\"index\":6},{\"arrivalTime\":{\"hours\":13,\"minutes\":59,\"offset\":0},\"departureTime\":{\"hours\":14,\"minutes\":1,\"offset\":0},\"index\":7},{\"arrivalTime\":{\"hours\":14,\"minutes\":25,\"offset\":0},\"departureTime\":{\"hours\":14,\"minutes\":32,\"offset\":0},\"index\":8},{\"arrivalTime\":{\"hours\":14,\"minutes\":45,\"offset\":0},\"departureTime\":{\"hours\":14,\"minutes\":47,\"offset\":0},\"index\":9}],\"trainName\":\"IC 187\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":48.784719,\"longitude\":9.182778},\"country\":\"Germany\",\"name\":\"Stuttgart Hbf\",\"stationId\":8029034},{\"coordinates\":{\"latitude\":48.68778,\"longitude\":9.004171},\"country\":\"Germany\",\"name\":\"Boeblingen\",\"stationId\":8029383},{\"coordinates\":{\"latitude\":48.441385,\"longitude\":8.688892},\"country\":\"Germany\",\"name\":\"Horb\",\"stationId\":8029399},{\"coordinates\":{\"latitude\":48.366388,\"longitude\":8.636665},\"country\":\"Germany\",\"name\":\"Sulz(Neckar)\",\"stationId\":8029403},{\"coordinates\":{\"latitude\":48.295553,\"longitude\":8.575556},\"country\":\"Germany\",\"name\":\"Oberndorf(Neckar)\",\"stationId\":8029406},{\"coordinates\":{\"latitude\":48.165282,\"longitude\":8.639164},\"country\":\"Germany\",\"name\":\"Rottweil\",\"stationId\":8029411},{\"coordinates\":{\"latitude\":48.06889,\"longitude\":8.740275},\"country\":\"Germany\",\"name\":\"Spaichingen\",\"stationId\":8029416},{\"coordinates\":{\"latitude\":47.980553,\"longitude\":8.798615},\"country\":\"Germany\",\"name\":\"Tuttlingen\",\"stationId\":8029429},{\"coordinates\":{\"latitude\":47.758888,\"longitude\":8.841385},\"country\":\"Germany\",\"name\":\"Singen(Hohentwiel)\",\"stationId\":8014558},{\"coordinates\":{\"latitude\":47.698337,\"longitude\":8.632782},\"country\":\"Switzerland\",\"name\":\"Schaffhausen\",\"stationId\":8503424},{\"coordinates\":{\"latitude\":47.37806,\"longitude\":8.540274},\"country\":\"Switzerland\",\"name\":\"Zuerich Hb\",\"stationId\":8503000}],\"trainType\":4,\"transportType\":\"Intercity\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":2},{"infoJson":"{\"attributeCodes\":[\"RQ\",\"1a\",\"2a\",\"BC\",\"BR\",\"BW\",\"C9\",\"FA\",\"FB\",\"GP\",\"RO\",\"Rm\",\"SC\",\"WF\",\"bp\"],\"attributes\":{\"BR\":\"Restaurant\",\"BW\":\"Bar\",\"FA\":\"Family compartment\",\"FB\":\"Bicycle transport\",\"RO\":\"Wheelchair access\",\"WF\":\"WiFi\",\"bp\":\"Business services\"},\"dataSource\":1,\"departureTrack\":\"12\",\"directionStation\":\"Milano Centrale\",\"duration\":{\"hours\":3,\"minutes\":18,\"offset\":0},\"endTime\":{\"hours\":18,\"minutes\":51,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"1185\",\"adminName\":\"Swiss Federal Railways-Passenger subsidiary\"},\"startTime\":{\"hours\":15,\"minutes\":33,\"offset\":0},\"stopExtraInfo\":[{\"arrivalTime\":{\"hours\":15,\"minutes\":59,\"offset\":0},\"departureTime\":{\"hours\":16,\"minutes\":0,\"offset\":0},\"index\":1},{\"arrivalTime\":{\"hours\":16,\"minutes\":16,\"offset\":0},\"departureTime\":{\"hours\":16,\"minutes\":18,\"offset\":0},\"index\":2},{\"arrivalTime\":{\"hours\":17,\"minutes\":12,\"offset\":0},\"departureTime\":{\"hours\":17,\"minutes\":14,\"offset\":0},\"index\":3},{\"arrivalTime\":{\"hours\":17,\"minutes\":28,\"offset\":0},\"departureTime\":{\"hours\":17,\"minutes\":30,\"offset\":0},\"index\":4},{\"arrivalTime\":{\"hours\":17,\"minutes\":55,\"offset\":0},\"departureTime\":{\"hours\":18,\"minutes\":2,\"offset\":0},\"index\":5},{\"arrivalTime\":{\"hours\":18,\"minutes\":8,\"offset\":0},\"departureTime\":{\"hours\":18,\"minutes\":10,\"offset\":0},\"index\":6}],\"trainName\":\"EC 29\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":47.37806,\"longitude\":8.540274},\"country\":\"Switzerland\",\"name\":\"Zuerich Hb\",\"stationId\":8503000},{\"coordinates\":{\"latitude\":47.17361,\"longitude\":8.514996},\"country\":\"Switzerland\",\"name\":\"Zug(Ch)\",\"stationId\":8502204},{\"coordinates\":{\"latitude\":47.049163,\"longitude\":8.549443},\"country\":\"Switzerland\",\"name\":\"Arth-Goldau\",\"stationId\":8505004},{\"coordinates\":{\"latitude\":46.195556,\"longitude\":9.02944},\"country\":\"Switzerland\",\"name\":\"Bellinzona\",\"stationId\":8505213},{\"coordinates\":{\"latitude\":46.00556,\"longitude\":8.946946},\"country\":\"Switzerland\",\"name\":\"Lugano\",\"stationId\":8505300},{\"coordinates\":{\"latitude\":45.832221,\"longitude\":9.03139},\"country\":\"Switzerland\",\"name\":\"Chiasso\",\"stationId\":8505307},{\"coordinates\":{\"latitude\":45.808885,\"longitude\":9.071941},\"country\":\"Italy\",\"name\":\"Como S.Giovanni\",\"stationId\":8301307},{\"coordinates\":{\"latitude\":45.486388,\"longitude\":9.204163},\"country\":\"Italy\",\"name\":\"Milano Centrale\",\"stationId\":8301700}],\"trainType\":4,\"transportType\":\"EuroCity\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":3}],"modificationDateTime":"2026-11-21T12:04:43.723Z","optionsJson":"{\"accessibility\":false,\"arrival\":{\"coordinates\":{\"latitude\":45.486388,\"longitude\":9.204163},\"country\":\"Italy\",\"name\":\"Milano Centrale\",\"stationId\":8301700},\"bikeCarriageNeeded\":false,\"dateSince1970\":1798090680000,\"departure\":{\"coordinates\":{\"latitude\":52.378607,\"longitude\":4.900559},\"country\":\"Netherlands\",\"name\":\"Amsterdam Centraal\",\"stationId\":8400058},\"directConnectionsNeeded\":false,\"firstClass\":false,\"isDeparture\":true,\"maxChanges\":0,\"noReservationNeeded\":false,\"onlyIncludedInPass\":false,\"restaurantBar\":false,\"sleepingFacilities\":false,\"transferTimeInMin\":1,\"transportationOptions\":1546,\"wifi\":false}","to":"Milano Centrale","tripId":"298EC612-EB52-4632-A590-0662BCAF2426","type":0},{"__typename":"TripTravel","createDateTime":"2026-11-21T12:05:06.470Z","date":"2027-01-06T00:00:00.000Z","from":"Lyon Perrache","id":"21214720-1A59-4D1C-9B8F-1999093393C5","infoJson":"{\"arrivalTime\":{\"hours\":19,\"minutes\":33,\"offset\":0},\"ctxRecon\":\"¶HKI¶T$A=1@O=LYON PERRACHE (France)@L=8772202@a=128@$A=1@O=LILLE FLANDRES (France)@L=8728600@a=128@$202701060904$202701061224$OGV 7818$1$$$§TF$A=1@O=LILLE FLANDRES (France)@L=8728600@a=128@$A=1@O=LILLE EUROPE (France)@L=8722326@a=128@$202701061224$202701061244$$1$$$§G@F$A=1@O=LILLE EUROPE (France)@L=8722326@a=128@$A=1@O=LILLE EUROPE (France)@L=8722326@a=128@$202701061300$202701061335$__CI$1$$$§T$A=1@O=LILLE EUROPE (France)@L=8722326@a=128@$A=1@O=LONDON ST PANCRAS INTL (United Kingdom)@L=7015400@a=128@$202701061335$202701061357$ES  9133$1$$$§TF$A=1@O=LONDON ST PANCRAS INTL (United Kingdom)@L=7015400@a=128@$A=1@O=LONDON KINGS CROSS (United Kingdom)@L=7061210@a=128@$202701061357$202701061448$$1$$$§T$A=1@O=LONDON KINGS CROSS (United Kingdom)@L=7061210@a=128@$A=1@O=EDINBURGH (United Kingdom)@L=7093280@a=128@$202701061503$202701061933$EXP     $1$$$¶GP¶ft@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§¶KC¶#VE#2#CF#100#CA#0#CM#1#SICT#0#AM#81#AM2#0#RT#4#¶KRCC¶#VE#1#\",\"dataSource\":1,\"date\":{\"day\":6,\"month\":1,\"year\":2027},\"departureTime\":{\"hours\":9,\"minutes\":4,\"offset\":0},\"haconVersion\":-1,\"lastUpdatedTimetableInformation\":\"2026-11-19T09:58:58Z\"}","legs":[{"infoJson":"{\"attributeCodes\":[\"RP\",\"2 \",\"NS\",\"RO\",\"SA\",\"kt\"],\"attributes\":{\"2 \":\"Second-class seats\",\"NS\":\"No smoking\",\"RO\":\"Wheelchair access\",\"SA\":\"Nursery\"},\"dataSource\":1,\"directionStation\":\"Lille Flandres\",\"duration\":{\"hours\":3,\"minutes\":20,\"offset\":0},\"endTime\":{\"hours\":12,\"minutes\":24,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"1187\",\"adminName\":\"SNCF Voyageurs\"},\"startTime\":{\"hours\":9,\"minutes\":4,\"offset\":0},\"stopExtraInfo\":[{\"arrivalTime\":{\"hours\":11,\"minutes\":5,\"offset\":0},\"departureTime\":{\"hours\":11,\"minutes\":11,\"offset\":0},\"index\":1},{\"arrivalTime\":{\"hours\":11,\"minutes\":21,\"offset\":0},\"departureTime\":{\"hours\":11,\"minutes\":28,\"offset\":0},\"index\":2}],\"trainName\":\"OGV 7818\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":45.748613,\"longitude\":4.825553},\"country\":\"France\",\"name\":\"Lyon Perrache\",\"stationId\":8772202},{\"coordinates\":{\"latitude\":48.869721,\"longitude\":2.782503},\"country\":\"France\",\"name\":\"Marne La Vallee Chessy\",\"stationId\":8711184},{\"coordinates\":{\"latitude\":49.003885,\"longitude\":2.571113},\"country\":\"France\",\"name\":\"Paris Aeroport Cdg2 Tgv Roissy\",\"stationId\":8727149},{\"coordinates\":{\"latitude\":50.636389,\"longitude\":3.070275},\"country\":\"France\",\"name\":\"Lille Flandres\",\"stationId\":8728600}],\"trainType\":2,\"transportType\":\"OUIGO Grande Vitesse\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":0},{"infoJson":"{\"attributeCodes\":[],\"attributes\":{},\"dataSource\":1,\"directionStation\":\"\",\"duration\":{\"hours\":0,\"minutes\":20,\"offset\":0},\"endTime\":{\"hours\":12,\"minutes\":44,\"offset\":0},\"isSeparateTicket\":false,\"startTime\":{\"hours\":12,\"minutes\":24,\"offset\":0},\"trainName\":\"\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":50.636389,\"longitude\":3.070275},\"country\":\"France\",\"name\":\"Lille Flandres\",\"stationId\":8728600},{\"coordinates\":{\"latitude\":50.639446,\"longitude\":3.07556},\"country\":\"France\",\"name\":\"Lille Europe\",\"stationId\":8722326}],\"type\":\"STATION_CHANGE_PUBLIC_TRANSPORT\"}","sortOrder":1},{"infoJson":"{\"attributeCodes\":[],\"attributes\":{},\"dataSource\":1,\"directionStation\":\"\",\"duration\":{\"hours\":0,\"minutes\":35,\"offset\":0},\"endTime\":{\"hours\":13,\"minutes\":35,\"offset\":0},\"isSeparateTicket\":false,\"startTime\":{\"hours\":13,\"minutes\":0,\"offset\":0},\"trainName\":\"\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":50.639446,\"longitude\":3.07556},\"country\":\"France\",\"name\":\"Lille Europe\",\"stationId\":8722326},{\"coordinates\":{\"latitude\":50.639446,\"longitude\":3.07556},\"country\":\"France\",\"name\":\"Lille Europe\",\"stationId\":8722326}],\"type\":\"CHKI\"}","sortOrder":2},{"infoJson":"{\"attributeCodes\":[\"RP\",\"1 \",\"2 \",\"97\",\"BW\",\"GP\",\"NS\",\"P \",\"SA\",\"Wf\"],\"attributes\":{\"97\":\"Disabled facilities\",\"1 \":\"First-class seats\",\"2 \":\"Second-class seats\",\"BW\":\"Bar\",\"NS\":\"No smoking\",\"P \":\"Premium\",\"SA\":\"Nursery\",\"Wf\":\"Free WiFi\"},\"dataSource\":1,\"directionStation\":\"London St Pancras Intl\",\"duration\":{\"hours\":1,\"minutes\":22,\"offset\":0},\"endTime\":{\"hours\":13,\"minutes\":57,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"0019\",\"adminName\":\"Eurostar International Limited\"},\"startTime\":{\"hours\":13,\"minutes\":35,\"offset\":0},\"trainName\":\"ES 9133\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":50.639446,\"longitude\":3.07556},\"country\":\"France\",\"name\":\"Lille Europe\",\"stationId\":8722326},{\"coordinates\":{\"latitude\":51.530555,\"longitude\":-0.125274},\"country\":\"United Kingdom\",\"name\":\"London St Pancras Intl\",\"stationId\":7015400}],\"trainType\":2,\"transportType\":\"Eurostar\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":3},{"infoJson":"{\"attributeCodes\":[\"tt\"],\"attributes\":{},\"dataSource\":1,\"directionStation\":\"\",\"duration\":{\"hours\":0,\"minutes\":51,\"offset\":0},\"endTime\":{\"hours\":14,\"minutes\":48,\"offset\":0},\"isSeparateTicket\":false,\"startTime\":{\"hours\":13,\"minutes\":57,\"offset\":0},\"trainName\":\"\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":51.530555,\"longitude\":-0.125274},\"country\":\"United Kingdom\",\"name\":\"London St Pancras Intl\",\"stationId\":7015400},{\"coordinates\":{\"latitude\":51.531391,\"longitude\":-0.12139},\"country\":\"United Kingdom\",\"name\":\"London Kings Cross\",\"stationId\":7061210}],\"type\":\"STATION_CHANGE_PUBLIC_TRANSPORT\"}","sortOrder":4},{"infoJson":"{\"attributeCodes\":[\"RP\",\"1 \",\"1r\",\"2 \",\"ot\",\"r8\"],\"attributes\":{\"1 \":\"First-class seats\",\"1r\":\"Restaurant in 1st class\",\"2 \":\"Second-class seats\"},\"dataSource\":1,\"directionStation\":\"Edinburgh\",\"duration\":{\"hours\":4,\"minutes\":30,\"offset\":0},\"endTime\":{\"hours\":19,\"minutes\":33,\"offset\":0},\"isSeparateTicket\":false,\"operator\":{\"admin\":\"X313\",\"adminName\":\"London North Eastern Railway\"},\"startTime\":{\"hours\":15,\"minutes\":3,\"offset\":0},\"stopExtraInfo\":[{\"arrivalTime\":{\"hours\":15,\"minutes\":51,\"offset\":0},\"departureTime\":{\"hours\":15,\"minutes\":52,\"offset\":0},\"index\":1},{\"arrivalTime\":{\"hours\":16,\"minutes\":18,\"offset\":0},\"departureTime\":{\"hours\":16,\"minutes\":20,\"offset\":0},\"index\":2},{\"arrivalTime\":{\"hours\":16,\"minutes\":42,\"offset\":0},\"departureTime\":{\"hours\":16,\"minutes\":43,\"offset\":0},\"index\":3},{\"arrivalTime\":{\"hours\":17,\"minutes\":3,\"offset\":0},\"departureTime\":{\"hours\":17,\"minutes\":6,\"offset\":0},\"index\":4},{\"arrivalTime\":{\"hours\":17,\"minutes\":32,\"offset\":0},\"departureTime\":{\"hours\":17,\"minutes\":34,\"offset\":0},\"index\":5},{\"arrivalTime\":{\"hours\":18,\"minutes\":0,\"offset\":0},\"departureTime\":{\"hours\":18,\"minutes\":3,\"offset\":0},\"index\":6},{\"arrivalTime\":{\"hours\":18,\"minutes\":27,\"offset\":0},\"departureTime\":{\"hours\":18,\"minutes\":28,\"offset\":0},\"index\":7}],\"trainName\":\"EXP\",\"trainStopStations\":[{\"coordinates\":{\"latitude\":51.531391,\"longitude\":-0.12139},\"country\":\"United Kingdom\",\"name\":\"London Kings Cross\",\"stationId\":7061210},{\"coordinates\":{\"latitude\":52.572225,\"longitude\":-0.248336},\"country\":\"United Kingdom\",\"name\":\"Peterborough\",\"stationId\":7061330},{\"coordinates\":{\"latitude\":53.07972,\"longitude\":-0.798053},\"country\":\"United Kingdom\",\"name\":\"Newark Northgate\",\"stationId\":7064990},{\"coordinates\":{\"latitude\":53.51861,\"longitude\":-1.13861},\"country\":\"United Kingdom\",\"name\":\"Doncaster\",\"stationId\":7064170},{\"coordinates\":{\"latitude\":53.955,\"longitude\":-1.091668},\"country\":\"United Kingdom\",\"name\":\"York\",\"stationId\":7082630},{\"coordinates\":{\"latitude\":54.5175,\"longitude\":-1.54583},\"country\":\"United Kingdom\",\"name\":\"Darlington\",\"stationId\":7078770},{\"coordinates\":{\"latitude\":54.96528,\"longitude\":-1.615829},\"country\":\"United Kingdom\",\"name\":\"Newcastle\",\"stationId\":7077280},{\"coordinates\":{\"latitude\":55.389723,\"longitude\":-1.635282},\"country\":\"United Kingdom\",\"name\":\"Alnmouth\",\"stationId\":7077870},{\"coordinates\":{\"latitude\":55.949724,\"longitude\":-3.186667},\"country\":\"United Kingdom\",\"name\":\"Edinburgh\",\"stationId\":7093280}],\"trainType\":16,\"transportType\":\"Express\",\"type\":\"TRAIN_TRAVEL\"}","sortOrder":5}],"modificationDateTime":"2026-11-21T12:05:06.470Z","optionsJson":"{\"accessibility\":false,\"arrival\":{\"coordinates\":{\"latitude\":55.949724,\"longitude\":-3.186667},\"country\":\"United Kingdom\",\"name\":\"Edinburgh\",\"stationId\":7093280},\"bikeCarriageNeeded\":false,\"dateSince1970\":1799222640000,\"departure\":{\"coordinates\":{\"latitude\":45.748613,\"longitude\":4.825553},\"country\":\"France\",\"name\":\"Lyon Perrache\",\"stationId\":8772202},\"directConnectionsNeeded\":false,\"firstClass\":false,\"isDeparture\":true,\"maxChanges\":0,\"noReservationNeeded\":false,\"onlyIncludedInPass\":false,\"restaurantBar\":false,\"sleepingFacilities\":false,\"transferTimeInMin\":1,\"transportationOptions\":1546,\"wifi\":false}","to":"Edinburgh","tripId":"298EC612-EB52-4632-A590-0662BCAF2426","type":0}],"version":1,"brand":"interrail","pass":false};
+
+  /** Converts numeric degrees to radians */
+if (typeof(Number.prototype.toRadians) === "undefined") {
+    Number.prototype.toRadians = function() {
+      return this * Math.PI / 180;
+    }
+  }
+
+  if(window.location.host == 'eurailapp.com' || window.location.host == 'www.eurailapp.com'){
+    window.location.href =  window.location.href.replace(window.location.host,'share.eurailapp.com')
+  }
+
+  if(window.location.host == 'acc.eurailapp.nl'){
+    window.location.href =  window.location.href.replace(window.location.host,'share.acc.eurailapp.nl')
+  }
+
+  </script>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+    body{
+      background-image: none
+    }
+
+
+    .container{
+      background-color: #ffffff;
+      border-radius: 8px;
+      width: 417px;
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.09);
+      border-radius: 8px;
+      padding:17px;
+      margin: auto;
+    }
+
+    .map-container{
+      height:337px;
+      width:382px;
+      box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.09);
+      z-index: 10000;
+    }
+
+    .stats > div{
+      display: inline-block;
+    }
+
+    .stats{
+      height:70px;
+      padding-left:27px;
+      padding-right:27px;
+      margin-top:17px;
+      clear: both;
+    }
+
+    .stat_counter_big{
+      text-align: center;
+      
+    }
+    
+    #stats_trains{
+      float:right;
+    }
+
+    #stats_kilometers{
+      padding-left: 34px!important;
+    }
+
+    #text1{
+      color: rgb(23, 32, 79);
+      font-size: 16px;
+      font-family: SF Compact;
+      font-weight: 300;
+      text-align: center;
+      margin-left:auto;
+      margin-right: auto;
+    }
+
+    #text2{
+      margin-top:10px;
+      color: rgb(23, 32, 79);
+      font-size: 19px;
+      font-family: SF Compact;
+      font-weight: normal;
+      text-align: center;
+      line-height: 22px;
+      margin-left:auto;
+      margin-right: auto;
+    }
+
+    #text3{
+      margin-top:10px;
+      color: rgb(23, 32, 79);
+      font-size: 16px;
+      font-family: SF Compact;
+      font-weight: 300;
+      text-align: center;
+      margin-left:auto;
+      margin-right: auto;
+    }
+    
+    .download{
+
+      width:54px;
+      margin:auto;
+      margin-top:27px;
+    }
+
+    .icon-country{
+      font-size:14px;
+    }
+
+    #button{
+      display: block;
+      background: rgb(31, 164, 204);
+      width: 175px;
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+      font-family: SF Compact;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: 0px;
+      margin:auto;
+      margin-top:22px;
+      padding:15px;
+      border-radius: 8px;
+      text-decoration: none;
+      
+    }
+
+    #download{
+      margin-left: auto;
+      margin-right: auto;
+      width:265px;
+      margin-top:20px;
+    }
+
+    #download_android{
+      background-image: url("https://eurail-trip-assets.s3.eu-central-1.amazonaws.com/template/assets/googleplay_badge%403x.png");
+      background-size: cover;
+      height: 40px;
+      width:131px;
+      display: inline-block;
+      margin-right:10px
+      
+    }
+
+    #download_ios{
+      background-image: url("https://eurail-trip-assets.s3.eu-central-1.amazonaws.com/template/assets/appstore_badge%403x.png");
+      background-size: cover;
+      height: 40px;
+      width:119px;
+      display: inline-block;
+    }
+
+    @media only screen and (max-width: 400px) {
+      body {
+        background-image: none;
+        background-color:#ffffff;
+      }
+
+      .container{
+        margin:0px;
+        box-shadow: none;
+        border-radius: 0px;
+        width:100%;
+      }
+
+      .map-container{
+        width: 100%;
+      }
+
+      #stats_kilometers{
+
+        padding-left: 0px!important;
+        margin-left: -35px;
+        position:absolute;
+        left:50%;
+        
+      }
+
+      .stats{
+        padding-left:0px;
+        padding-right:0px;
+      }
+
+      #stats_trains{
+        position: absolute;
+        right:20px;
+      }
+
+      #stats_countries{
+        position: absolute;
+        left:20px;
+      }
+
+      
+
+    }
+
+h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* header */
+.header {
+  text-align: center;
+  margin-top: 26px;
+  margin-bottom: 20px;
+}
+
+.header_title {
+  font-size: 20px;
+  line-height: 32px;
+  color: #140A33;
+  padding-bottom: 2px;
+  font-weight: 600;
+  
+}
+
+.header_subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: unset;
+}
+
+#map{
+
+  border-radius: 16px;
+}
+
+/* Footer */
+.footer {
+  margin-top:16px;
+  display: flex;
+  justify-content: space-between;
+  padding:16px;
+}
+
+#payoff{
+  font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 28px;
+/* or 140% */
+letter-spacing: -0.45px;
+color: #140A33;
+height: 72px;
+
+
+}
+
+.logo-eurail,
+.logo-interrail {
+  background-image: url("https://eurail-trip-assets.s3.eu-central-1.amazonaws.com/template/assets/eurail.svg");
+  width: 91px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 13px;
+  position: relative;
+}
+
+.logo-interrail {
+  background-image: url("https://eurail-trip-assets.s3.eu-central-1.amazonaws.com/template/assets/interrail.svg");
+  background-position-x: 0px;
+  background-size: contain;
+  width: 70px;
+  height: 20px;
+  background-position-y: -7px;
+}
+
+  </style>
+
+  </head>
+  <body>
+      <div class="container">
+        <div class="header">
+            <h1 id="title" class='header_title'></h1>
+            <h2 id="date" class='header_subtitle'></h2>
+        </div>
+        <div class="map-container">
+            <div id="map" class="map" style="width:100%;height:100%"></div>
+        </div>
+
+        <div class="stats">
+          <div id="stats_countries" class="stat-block small">
+            <div class="stat_header"><span class="icon icon-country"></span>Countries</div>
+            <div id="stats_countries_amount" class="stat_counter_big"></div>
+          </div>
+
+          <div id="stats_kilometers" class="stat-block small">
+            <div class="stat_header"><span class="icon icon-stats"></span>Kilometers</div>
+            <div class="stat_counter_big" id="stats_kilometstat_counter_bigers_amount"></div>
+          </div>
+
+          <div id="stats_trains" class="stat-block small">
+            <div class="stat_header"><span class="icon icon-train"></span>Trains</div>
+            <div class="stat_counter_big" id="stats_trains_amount"></div>
+          </div>
+        </div>
+
+        <div id="text1">
+          Save this trip to your Rail Planner app and see the full itinerary, map, statistics and more.
+            <!--Download the Rail Planner app to see the full itinerary, map, statistics and more for this trip.-->
+        </div>
+
+      <div>
+        <a id="button" href="#">
+            Save this trip
+        </a>
+      </div>
+        
+
+        <div id="text3">
+            Enjoy an easier trip with our free trip planner and timetable app
+        </div>
+
+        <div id="download">
+          <a href="https://eurailapp.com/ios" id="download_ios"></a>
+          <a href="https://eurailapp.com/android" id="download_android"></a>
+        </div>
+        <div class="footer">
+          <div id="payoff">Go one stop<br />further</div>
+          <div id="brand" class="logo-interail"></div>
+        </div>
+      </div>
+
+<script>
+  var path = "/share/trip?id=CD6B5770-E5A3-11F1-BCA5-63D0A5D6E0F7&brand=interrail&type=list"
+</script>
+<script>
+
+if( !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+
+  document.getElementById('button').style.display = 'none';
+  document.getElementById('text1').innerHTML = 'Download the Rail Planner app to see the full itinerary, map, statistics and more for this trip.';
+}
+
+if(window.location.host == 'eurailapp.com' || window.location.host == 'www.eurailapp.com' || window.location.host == 'share.eurailapp.com'){
+    document.getElementById('button').setAttribute('href', "https://eurailapp.com"+path);
+} else {
+
+    document.getElementById('button').setAttribute('href', "https://acc.eurailapp.nl"+path);
+}
+
+date1 = new Date(fixDate(payload.travels[0].date));
+date2 = new Date(fixDate(payload.travels[payload.travels.length -1].date));
+
+payload.travels.forEach(value => {
+
+    d = new Date(fixDate(value.date))
+
+    if(d < date1){
+        date1 = d;
+    }
+
+    if(d > date2){
+        date2 = d;
+    }
+})
+
+dateString = date1.getDate() + ' ' + date1.toLocaleString('en-UK', { month: 'long'}) + ' ' + date1.getFullYear() + ' - ' + date2.getDate() + ' ' + date2.toLocaleString('en-UK', { month: 'long'}) + ' ' + date2.getFullYear();
+
+document.getElementById('date').innerHTML = dateString;
+
+document.getElementById('brand').className = "logo-" + payload.brand;
+
+var map;
+
+function initMap() {
+    
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},   
+        zoom: 5,
+        disableDefaultUI: true
+    });
+  
+    var southWest = new google.maps.LatLng(35.586090337890596,-11.874847162109404);
+    var northEast = new google.maps.LatLng(73.52990890877429,25.487756873977826);
+    var bounds = new google.maps.LatLngBounds(southWest,northEast);
+    map.setZoom(20)
+
+    legs = [];
+
+    parseLegs(map, payload.travels)
+}
+
+countries = [];
+distance = 0;
+trains = 0;
+
+function parseLegs(map,travels){
+
+    var southWest = {lat: 0, lng: 0};
+    var northEast = {lat: 0, lng: 0};
+
+    travels.forEach((travel,travelIndex) => {
+
+      legs = travel.legs
+
+      legs.sort((a,b) => {
+
+        if(a.sortOrder < b.sortOrder){
+
+            return -1;
+        }
+
+        return 1;
+      });
+
+      legs.forEach((leg, legIndex) => {
+          
+          trains++;
+
+          info = JSON.parse(leg.infoJson)
+
+          coordinates = []
+
+          // //travel  = null
+          
+          // payload.travels.forEach(item => {
+
+          //     if(item.id == leg.tripTravelId){
+          //        // travel = item;
+          //     }
+
+          // })
+
+          color = '#17204F'
+
+          if(!payload.name || (travel && new Date(travel.date) > new Date()) || (travel && new Date(travel.date).toLocaleDateString() == new Date().toLocaleDateString())){
+
+              color = '#0092be'
+          }
+
+          if(countries.indexOf(info.trainStopStations[0].country) == -1 && info.trainStopStations[0].country){
+            countries.push(info.trainStopStations[0].country)
+          }
+
+          if(info.trainStopStations[info.trainStopStations.length - 1].country && countries.indexOf(info.trainStopStations[info.trainStopStations.length - 1].country) == -1){
+            countries.push(info.trainStopStations[info.trainStopStations.length - 1].country)
+          }
+
+          info.trainStopStations.forEach((station,index) => {
+              var latlng = {lat: station.coordinates.latitude, lng: station.coordinates.longitude};
+
+              if(index < info.trainStopStations.length - 1){
+              
+                var nextStation = info.trainStopStations[index + 1];
+                distance += greatCircle(station.coordinates,nextStation.coordinates) / 1000;
+              }
+
+              if(station.coordinates.latitude != 0 && station.coordinates.longitude != 0){
+                coordinates.push(latlng)
+
+                if((index == 0 && legIndex == 0) || (index == info.trainStopStations.length - 1 && legIndex == legs.length -1) || !payload.name && index == info.trainStopStations.length - 1){
+                    var marker = new google.maps.Marker({
+                        position: latlng,
+                        map: map,
+                        icon : {
+                            path: google.maps.SymbolPath.CIRCLE,
+                            scale: 6,
+                            strokeColor: color,
+                            strokeWeight: 2,
+                            fillColor: color,
+                            fillOpacity: 1
+                        }
+                    });
+                }
+              
+
+                if(southWest.lat == 0 || southWest.lat > latlng.lat){southWest.lat = latlng.lat}
+                if(northEast.lat == 0 || northEast.lat < latlng.lat){northEast.lat = latlng.lat}
+                if(southWest.lng == 0 || southWest.lng > latlng.lng){southWest.lng = latlng.lng}
+                if(northEast.lng == 0 || northEast.lng < latlng.lng){northEast.lng = latlng.lng}
+              }
+          })
+
+          var lineSymbol = {
+                path: 'M 0,0 0,0',
+                strokeOpacity: 1,
+                scale: 4
+            };
+
+            var path = new google.maps.Polyline({
+                path: coordinates,
+                strokeColor: color,
+                strokeOpacity: 0,
+                strokeWeight: 3,
+                icons: [{
+                    icon: lineSymbol,
+                    offset: '0',
+                    repeat: '7px'
+                }],
+            });
+
+
+          let past = false;
+
+          if(!payload.name){
+
+              path.icons = null
+              path.strokeOpacity = 1
+          }
+
+          path.setMap(map);
+      });
+    });
+
+    var bounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(southWest.lat,southWest.lng),
+        new google.maps.LatLng(northEast.lat,northEast.lng)
+    )
+
+    map.fitBounds(bounds);
+
+    document.getElementById('stats_countries_amount').innerHTML = countries.length;
+    document.getElementById('stats_kilometstat_counter_bigers_amount').innerHTML = formatInt(Math.round(distance));
+    document.getElementById('stats_trains_amount').innerHTML = trains;
+
+    if(payload.name){
+      document.getElementById('title').innerHTML = payload.name;
+    } else {
+      document.getElementById('title').innerHTML = payload.travels[0].from + " - "  + payload.travels[0].to
+      leg1 = JSON.parse(legs[0].infoJson).startTime
+      leg2 = JSON.parse(legs[legs.length - 1].infoJson).endTime
+      date = new Date(fixDate(payload.travels[0].date))
+      dateString = date.getDate() + ' ' + date.toLocaleString('en-UK', { month: 'long'}) + ' ' + date.getFullYear();
+      
+      dateString = dateString + " " + padInt(leg1.hours) + ':' + padInt(leg1.minutes) + " - " + padInt(leg2.hours) + ':' + padInt(leg2.minutes)
+      document.getElementById('date').innerHTML = dateString;
+    } 
+
+    function padInt(value){
+
+value = '' + value
+
+
+if(value.length == 1){
+  return '0' + value;
+}
+
+return value;
+}
+
+    function formatInt(value){
+
+      value = Math.round(value);      
+      return(value)
+    }
+
+    function greatCircle(start,end){
+
+      lat1 = start.latitude;
+      lat2 = end.latitude;
+
+      lon1 = start.longitude;
+      lon2 = end.longitude;
+
+      var R = 6371e3; // metres
+      var φ1 = lat1.toRadians();
+      var φ2 = lat2.toRadians();
+      var Δφ = (lat2-lat1).toRadians();
+      var Δλ = (lon2-lon1).toRadians();
+
+      var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+              Math.cos(φ1) * Math.cos(φ2) *
+              Math.sin(Δλ/2) * Math.sin(Δλ/2);
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+      var d = R * c;
+
+      return d;
+
+    }
+
+}
+
+function fixDate(date){
+
+  return date.split('+')[0];
+}
+
+</script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3EFkvuAGzH8hB7-D2FS1QJHhcwOB1HDs&callback=initMap" async defer></script>
+  </div>
+
+  </body>
+
+
+
+</html>

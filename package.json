@@ -6,12 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "check": "tsc -p ."
   },
   "dependencies": {
     "@preact/signals": "^2",
     "fresh": "npm:@frsh/fresh@^3.0.0-alpha.202610031718",
     "preact": "^11",
+    "temporal-polyfill": "^1.0.8",
     "vite": "^8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
   }
 }
