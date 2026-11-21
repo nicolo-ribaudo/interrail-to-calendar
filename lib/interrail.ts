@@ -80,6 +80,8 @@ interface RawLegInfo {
 }
 interface RawTravel {
   id: string;
+  /** 0 = planned in the app, 1 = inserted manually */
+  type?: number;
   date: string;
   from: string;
   to: string;

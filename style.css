@@ -230,6 +230,20 @@ a {
   color: var(--muted);
   font-size: 0.85em;
 }
+.merge-toggle {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  /* Align with the leg time, after the leg checkbox. */
+  margin: 0.15rem 0 0 calc(13px + 0.5rem);
+  color: var(--muted);
+  font-size: 0.85em;
+  cursor: pointer;
+}
+.merge-toggle:has(input:disabled) {
+  cursor: default;
+  opacity: 0.6;
+}
 
 .download-bar {
   position: sticky;
